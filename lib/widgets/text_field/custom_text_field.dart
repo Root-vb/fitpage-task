@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import 'package:starter/app/theme/app_colors.dart';
 import 'package:starter/app/theme/styles.dart';
 import 'package:starter/utils/helper/text_field_wrapper.dart';
@@ -27,13 +25,13 @@ class CustomTextField extends StatelessWidget {
     return Obx(
       () => TextField(
         controller: wrapper.controller,
-        style: Styles.tsPrimaryColorRegular18,
+        style: Styles.tsPrimaryColorRegular20,
         maxLength: maxLength,
         keyboardType: inputType,
         enabled: isEnabled,
         decoration: InputDecoration(
           errorText: wrapper.errorText.isEmpty ? null : wrapper.errorText,
-          errorStyle: Styles.tsPrimaryColorRegular18,
+          errorStyle: Styles.tsPrimaryColorRegular20,
           counterText: '',
           fillColor: AppColors.white,
           filled: true,

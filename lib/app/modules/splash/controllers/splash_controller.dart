@@ -1,9 +1,5 @@
-import 'dart:io';
-
 import 'package:get/get.dart';
-import 'package:starter/app/data/values/env.dart';
 import 'package:starter/app/routes/app_pages.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SplashController extends GetxController {
   @override
@@ -20,17 +16,5 @@ class SplashController extends GetxController {
     Future.delayed(const Duration(milliseconds: 1000), () {
       Get.offAllNamed(Routes.HOME);
     });
-  }
-}
-
-_launchStore() async {
-  if (Platform.isAndroid) {
-    if (!await launch(Env.playStoreLink)) {
-      throw 'Could not launch ${Env.playStoreLink}';
-    }
-  } else if (Platform.isIOS) {
-    if (!await launch(Env.appStoreLink)) {
-      throw 'Could not launch ${Env.appStoreLink}';
-    }
   }
 }

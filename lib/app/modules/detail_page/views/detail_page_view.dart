@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:starter/app/data/models/dto/base_data.dart';
+import 'package:starter/app/modules/detail_page/views/custom_text_widget.dart';
 import 'package:starter/app/routes/app_pages.dart';
 import 'package:starter/app/theme/app_colors.dart';
 import 'package:starter/app/theme/styles.dart';
@@ -24,7 +25,12 @@ class DetailPageView extends GetView<DetailPageController> {
       ),
       body: Container(
         color: AppColors.primaryColor,
-        child: Center(child: headerWidget()),
+        child: Column(
+          children: [
+            headerWidget(),
+            CustomText(data: controller.pageData),
+          ],
+        ),
       ),
     );
   }
@@ -43,7 +49,7 @@ class DetailPageView extends GetView<DetailPageController> {
           RichText(
               text: TextSpan(
             text: controller.pageData.name,
-            style: Styles.tsWhiteRegular18,
+            style: Styles.tsWhiteRegular20,
           )),
           const SizedBox(
             height: 4.0,

@@ -14,15 +14,12 @@ dependencies:
   cupertino_icons: ^1.0.4
 
   # GetX
-  get: ^4.6.1
+  get: ^4.6.5
   get_storage: ^2.0.3
   get_cli: ^1.8.1
 
   # Network
   dio: ^4.0.4
-
-  #Utilities
-  url_launcher: ^6.0.20
 
 dev_dependencies:
   flutter_test:

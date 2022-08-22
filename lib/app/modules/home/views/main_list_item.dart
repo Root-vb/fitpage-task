@@ -18,7 +18,7 @@ class MainListItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: EdgeInsets.fromLTRB(8.0, 16.0, 16.0, 0.0),
+          margin: EdgeInsets.fromLTRB(8.0, 28.0, 16.0, 0.0),
           color: AppColors.white,
           width: 2.0,
           height: 2.0,
@@ -27,10 +27,13 @@ class MainListItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(
+              height: 16.0,
+            ),
             RichText(
                 text: TextSpan(
               text: heading,
-              style: Styles.tsWhiteRegular18,
+              style: Styles.tsWhiteRegular20,
             )),
             const SizedBox(
               height: 4.0,
@@ -44,15 +47,6 @@ class MainListItem extends StatelessWidget {
                     fontSize: 10.0,
                   )),
             ),
-            const SizedBox(
-              height: 4.0,
-            ),
-            RichText(
-                text: const TextSpan(
-              text:
-                  "....................................................................................",
-              style: Styles.tsWhiteRegular18,
-            ))
           ],
         ),
       ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:starter/app/theme/app_colors.dart';
 import 'package:starter/app/theme/styles.dart';
 
@@ -22,7 +21,7 @@ class PrimaryFilledButton extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Text(
           text,
-          style: Styles.tsWhiteRegular18,
+          style: Styles.tsWhiteRegular20,
         ),
       ),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),

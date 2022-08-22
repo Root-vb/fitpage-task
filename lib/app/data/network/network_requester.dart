@@ -47,7 +47,6 @@ class NetworkRequester {
       final response = await _dio.get(path, queryParameters: query);
       return response.data;
     } on Exception catch (error, stack) {
-      // FirebaseCrashlytics.instance.recordError(error, stack);
       return ExceptionHandler.handleError(error);
     }
   }
@@ -65,7 +64,6 @@ class NetworkRequester {
       );
       return response.data;
     } on Exception catch (error, stack) {
-      // FirebaseCrashlytics.instance.recordError(error, stack);
       return ExceptionHandler.handleError(error);
     }
   }
@@ -79,7 +77,6 @@ class NetworkRequester {
       final response = await _dio.put(path, queryParameters: query, data: data);
       return response.data;
     } on Exception catch (error, stack) {
-      // FirebaseCrashlytics.instance.recordError(error, stack);
       return ExceptionHandler.handleError(error);
     }
   }
@@ -94,7 +91,6 @@ class NetworkRequester {
           await _dio.patch(path, queryParameters: query, data: data);
       return response.data;
     } on Exception catch (error, stack) {
-      // FirebaseCrashlytics.instance.recordError(error, stack);
       return ExceptionHandler.handleError(error);
     }
   }
@@ -109,7 +105,6 @@ class NetworkRequester {
           await _dio.delete(path, queryParameters: query, data: data);
       return response.data;
     } on Exception catch (error, stack) {
-      // FirebaseCrashlytics.instance.recordError(error, stack);
       return ExceptionHandler.handleError(error);
     }
   }

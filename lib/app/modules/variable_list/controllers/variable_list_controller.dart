@@ -1,17 +1,12 @@
 import 'package:get/get.dart';
 import 'package:starter/app/data/models/dto/base_data.dart';
 
-class DetailPageController extends GetxController {
-  //TODO: Implement DetailPageController
+class VariableListController extends GetxController {
+  VariableData variableData = Get.arguments['data'];
 
-  var pageData = HomeData();
-
+  final count = 0.obs;
   @override
   void onInit() {
-    dynamic data = Get.arguments;
-    if (data != null) {
-      pageData = data['homeData'];
-    }
     super.onInit();
   }
 
@@ -24,4 +19,6 @@ class DetailPageController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  void increment() => count.value++;
 }
